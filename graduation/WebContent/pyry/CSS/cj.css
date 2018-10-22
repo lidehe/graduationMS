@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+.ajaxLoad1,.ajaxLoad2{
+	display: none;
+	background-image: url(../Images/Icons/Load/load-13.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:28px 28px;
+	height:28px;
+	cursor:default;
+}
+
+.searchBajax{
+	display: none;
+	background-image: url(../Images/Icons/Load/load-8.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+tr.stuTr{
+	display:none;
+}

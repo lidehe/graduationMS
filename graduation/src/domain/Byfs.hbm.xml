@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Byfs" table="tb_byfs">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="va_name" length="30" type="string" />
+		<property name="yi" column="va_yi" length="30" type="string" />
+		<property name="er" column="va_er" length="30" type="string" />
+		<property name="san" column="va_san" length="30" type="string" />
+		<property name="si" column="va_si" length="30" type="string" />
+		<property name="wu" column="va_wu" length="30" type="string" />
+		<property name="liu" column="va_liu" length="30" type="string" />
+		<property name="qi" column="va_qi" length="30" type="string" />
+		<property name="ba" column="va_ba" length="30" type="string" />
+		<property name="jiu" column="va_jiu" length="30" type="string" />
+		<property name="shi" column="va_shi" length="30" type="string" />
+		<property name="shiyi" column="va_shiyi" length="30" type="string" />
+		<property name="shier" column="va_shier" length="30" type="string" />
+		<property name="shisan" column="va_shisan" length="30" type="string" />
+		<property name="shisi" column="va_shisi" length="30" type="string" />
+		<property name="isPass1" column="va_isPass1" type="integer" />
+		<property name="isPass2" column="va_isPass2"  type="integer" />
+		<property name="isPass3" column="va_isPass3" type="integer" />
+		<property name="start1" column="va_start1" type="java.util.Date" />
+		<property name="end1" column="va_end1" type="java.util.Date" />
+		<property name="start2" column="va_start2" type="java.util.Date" />
+		<property name="end2" column="va_end2" type="java.util.Date" />
+		<property name="start3" column="va_start3" type="java.util.Date" />
+		<property name="end3" column="va_end3" type="java.util.Date" />
+		<property name="start4" column="va_start4" type="java.util.Date" />
+		<property name="end4" column="va_end4" type="java.util.Date" />
+		<property name="start5" column="va_start5" type="java.util.Date" />
+		<property name="end5" column="va_end5" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

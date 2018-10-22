@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+.simple_buttons div.ajaxAnimation,.simple_buttons div.addGBajax,.simple_buttons div.createGajax,.simple_buttons div.huiFajax{
+	display: none;
+	background-image: url(../Images/Icons/Load/load-8.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+span.tipsMessage{
+	float:right;
+	font-size:10px;
+	color:#9a9a9a;
+}
+
+
+.contents .line_border_no {
+	border-bottom: 0;
+}
+
+.contents .psbcontainer {
+	padding: 0 0;
+	overflow: auto;
+	border-top: 0;
+}
+
+div.sxcjpsb {
+	width: 793px;
+	height: 590px;
+	margin: 0 auto;
+	background: url(../Images/sxcj.jpg) no-repeat;
+}
+
+.rO {
+	cursor: text;
+}
+
+input.psbInput2 {
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 12px 0;
+	outline: medium;
+}
+
+.stxt{
+	outline: medium;
+    resize: none;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+    left: 157px;
+    top: 22px;
+    width: 447px;
+    height: 120px;
+    padding: 0px 44px;
+    max-width: 447px;
+    max-height: 120px;
+}
+
+.szdls{
+	top: 41px;
+    width: 104px;
+    left: -124px;
+}
+
+.sdate{
+	top: 41px;
+    width: 96px;
+    left: -76px;
+}
+
+.syi{
+	width: 71px;
+    top: 77px;
+    left: 621px;
+}
+
+.ser{
+	left: 542px;
+    width: 71px;
+    top: 120px;
+}
+
+.ssan{
+	left: 463px;
+    width: 71px;
+    top: 162px;
+}
+
+.ssi{
+	left: 384px;
+    width: 71px;
+    top: 204px;
+}
+
+.swu{
+	left: 305px;
+    width: 71px;
+    top: 246px;
+}
+
+.szf{
+	left: 114px;
+    width: 183px;
+    top: 289px;
+}
+
+.stxt1{
+	outline: medium;
+    resize: none;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+    left: 157px;
+    top: 290px;
+    width: 447px;
+    height: 80px;
+    padding: 0px 44px;
+    max-width: 447px;
+    max-height: 80px;
+}
+
+.sfzr{
+	top: 307px;
+    left: -108px;
+    width: 104px;
+}
+
+.sdate1{
+	top: 307px;
+    left: -60px;
+    width: 89px;
+}
+
+.psbInput1 {
+	outline: medium;
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+}

@@ -1,0 +1,194 @@
+<%@page import="utils.SetStudentStage"%>
+<%@page import="domain.Byfs"%>
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Student"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	Student studentB = (Student) session.getAttribute("student");
+	int stage = studentB.getStage();//该学生的进度
+	int byfsBIdB = studentB.getType();
+	Byfs byfsB = ServiceFactory.getStudentServiceInstance().getStudentByfs(-1);
+	if (stage > 0) {
+		byfsB = ServiceFactory.getStudentServiceInstance().getStudentByfs(byfsBIdB);
+	}
+%>
+<aside class="sidebar">
+	<!-- 		左侧菜单，当前项带有active_tab -->
+	<ul class="tab_nav">
+		<li
+			class="
+		<%if (sideInd == 0) {
+				out.print("active_tab");
+			}%>
+		 	i_32_ui"><a
+			href="bylx.do?ser=ind" title="毕业类型"> <span class="tab_label">毕业类型</span>
+				<span class="tab_info"></span>
+		</a> <%
+ 	if (stage == 0) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+
+		<%
+			if (stage >= 3) {
+		%>
+		<li
+			class="
+		<%if (sideInd == 1) {
+					out.print("active_tab");
+				}%>
+		 i_32_ui"><a
+			href="kt.do" title="<%=byfsB.getYi()%>"> <span class="tab_label">
+					<%=byfsB.getYi()%>
+			</span> <span class="tab_info"></span>
+		</a> <%
+ 	if (stage >=3 && stage <= 5) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+		<%
+			} else {
+		%>
+		<li class="i_32_ui"><a href="javascript:void(0);" title="暂不可点">
+				<span class="tab_label"> <%=byfsB.getYi()%>
+			</span> <span class="tab_info"></span>
+		</a><span class="nopeSpan">&nbsp;&nbsp;</span></li>
+		<%
+			}
+		%>
+
+		<%
+			if (stage >= 6) {
+		%>
+		<li
+			class="
+		<%if (sideInd == 2) {
+					out.print("active_tab");
+				}%>
+		i_32_dashboard"><a
+			href="ktbg.do" title="<%=byfsB.getWu()%>"> <span
+				class="tab_label"> <%=byfsB.getWu()%>
+			</span> <span class="tab_info"></span>
+		</a> <%
+ 	if (stage >= 6 && stage <= 7) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+		<%
+			} else {
+		%>
+		<li class="i_32_dashboard"><a href="javascript:void(0);"
+			title="暂不可点"> <span class="tab_label"> <%=byfsB.getWu()%>
+			</span> <span class="tab_info"></span>
+		</a><span class="nopeSpan">&nbsp;&nbsp;</span></li>
+		<%
+			}
+		%>
+
+		<%
+			if (stage >= 8 && 1 == byfsB.getIsPass2()) {
+		%>
+		<li
+			class="
+		<%if (sideInd == 3) {
+					out.print("active_tab");
+				}%>
+			i_32_forms"><a
+			href="jdxcg.do" title="<%=byfsB.getBa()%>"> <span
+				class="tab_label"> <%=byfsB.getBa()%>
+			</span> <span class="tab_info"></span>
+		</a> <%
+ 	if (stage >= 8 && stage <= 10) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+		<%
+			} else if (stage < 8 && 1 == byfsB.getIsPass2()) {
+		%>
+		<li class="i_32_forms"><a href="javascript:void(0);" title="暂不可点">
+				<span class="tab_label"> <%=byfsB.getBa()%>
+			</span> <span class="tab_info"></span>
+		</a><span class="nopeSpan">&nbsp;&nbsp;</span></li>
+		<%
+			}
+		%>
+
+		<%
+			if (stage >= 11 && 1 == byfsB.getIsPass3()) {
+		%>
+		<li
+			class="
+		<%if (sideInd == 4) {
+					out.print("active_tab");
+				}%>
+		i_32_tables"><a
+			href="lwcg.do" title="<%=byfsB.getShiyi()%>"> <span
+				class="tab_label"> <%=byfsB.getShiyi()%>
+			</span> <span class="tab_info"></span>
+		</a> <%
+ 	if (stage >= 11 && stage <= 13) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+		<%
+			} else if (stage < 11 && 1 == byfsB.getIsPass3()) {
+		%>
+		<li class="i_32_tables"><a href="javascript:void(0);"
+			title="暂不可点"> <span class="tab_label"> <%=byfsB.getShiyi()%>
+			</span> <span class="tab_info"></span>
+		</a><span class="nopeSpan">&nbsp;&nbsp;</span></li>
+		<%
+			}
+		%>
+
+		<%
+			if (stage >= 14) {
+		%>
+		<li
+			class="
+		<%if (sideInd == 5) {
+					out.print("active_tab");
+				}%>
+		i_32_tables"><a
+			href="zzlw.do" title="<%=byfsB.getShisi()%>"> <span
+				class="tab_label"> <%=byfsB.getShisi()%>
+			</span> <span class="tab_info"></span>
+		</a> <%
+ 	if (stage >= 14) {
+ %> <span class="catchSpan" title="最新进度">&nbsp;&nbsp;</span>
+			<%
+				} else {
+			%> <span class="nopeSpan">&nbsp;&nbsp;</span> <%
+ 	}
+ %></li>
+		<%
+			} else {
+		%>
+		<li class="i_32_tables"><a href="javascript:void(0);"
+			title="暂不可点"> <span class="tab_label"> <%=byfsB.getShisi()%>
+			</span> <span class="tab_info"></span>
+		</a><span class="nopeSpan">&nbsp;&nbsp;</span></li>
+		<%
+			}
+		%>
+
+
+	</ul>
+</aside>

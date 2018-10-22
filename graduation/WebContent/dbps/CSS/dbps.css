@@ -1,0 +1,348 @@
+@CHARSET "UTF-8";
+
+.simple_buttons div.ajaxAnimation, .simple_buttons div.addGBajax,
+	.simple_buttons div.createGajax {
+	display: none;
+	background-image: url(../Images/Icons/Load/load-8.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ajaxLoad1,.ajaxLoad2{
+	display: none;
+	background-image: url(../Images/Icons/Load/load-13.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:28px 28px;
+	height:28px;
+	cursor:default;
+}
+
+span.tipsMessage {
+	float: right;
+	font-size: 10px;
+	color: #9a9a9a;
+}
+
+td input.UnchooseKt {
+	cursor: default;
+	color: #dadada;
+}
+
+input#wj {
+	cursor: pointer;
+}
+
+.contents .line_border_no {
+	border-bottom: 0;
+}
+
+.contents .psbcontainer {
+	padding: 0 0;
+	overflow: auto;
+	border-top: 0;
+}
+
+div.pypsbDiv {
+	width: 793px;
+	height: 904px;
+	margin: 0 auto;
+	background: url(../Images/psjspsb.jpg) no-repeat;
+}
+
+div.dbpsbDiv {
+	width: 793px;
+	height: 948px;
+	margin: 0 auto;
+	background: url(../Images/dbpsb.jpg) no-repeat;
+}
+
+input.psbInput {
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 10px 0;
+	outline: medium;
+}
+
+input.psbInput2{
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 4px 0;
+	outline: medium;
+}
+
+.rO {
+	cursor: text;
+}
+
+.dxsxm {
+	width: 105px;
+    left: 158px;
+    top: 82px;
+}
+
+.dzy {
+	left: 199px;
+    top: 82px;
+    width: 253px;
+}
+
+.dbj {
+	left: 266px;
+    width: 71px;
+    top: 82px;
+}
+
+.dktm {
+	left: 158px;
+    top: 83px;
+    width: 553px;
+}
+
+.dyi {
+	top: 159px;
+    left: 79px;
+    width: 71px;
+}
+
+.der {
+	width: 71px;
+    top: 193px;
+    left: 0px;
+}
+
+.dsan {
+	width: 71px;
+    top: 220px;
+    left: -79px;
+}
+
+.dsi {
+	width: 71px;
+    top: 209px;
+    left: 640px;
+}
+
+.dwu {
+	width: 71px;
+    top: 243px;
+    left: 561px;
+}
+
+.dliu {
+	width: 71px;
+    top: 277px;
+    left: 482px;
+}
+
+
+.dzf {
+	top: 309px;
+    width: 71px;
+    left: 403px;
+}
+
+.dtxt {
+	outline: medium;
+    resize: none;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+    left: 84px;
+    top: 333px;
+    width: 559px;
+    height: 298px;
+    padding: 0px 34px;
+    max-width: 559px;
+    max-height: 298px;
+}
+
+.dtxt1 {
+	outline: medium;
+    resize: none;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+    left: 84px;
+    top: 354px;
+    width: 559px;
+    height: 120px;
+    padding: 0px 34px;
+    max-width: 559px;
+    max-height: 298px;
+}
+
+.psbInput1 {
+	outline: medium;
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+}
+
+.dzdjs {
+	width: 112px;
+    top: 390px;
+    left: -356px;
+}
+
+.dyear {
+	left: 495px;
+    top: 371px;
+    width: 64px;
+}
+
+.dmonth {
+	left: 511px;
+    top: 371px;
+    width: 32px;
+}
+
+.dday {
+	width: 32px;
+    top: 371px;
+    left: 519px;
+}
+
+
+input.psbInput3 {
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 15px 0;
+	outline: medium;
+}
+
+input.psbInput4 {
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 4px 0;
+	outline: medium;
+}
+
+input.psbInput5 {
+	border: 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	padding: 20px 0;
+	outline: medium;
+}
+
+.pxsxm {
+	width: 107px;
+    left: 192px;
+    top: 72px;
+}
+
+.pzy {
+	left: 233px;
+    top: 72px;
+    width: 191px;
+}
+
+.pbj {
+	left: 274px;
+    width: 87px;
+    top: 72px;
+}
+
+.pktm {
+	left: 192px;
+    top: 69px;
+    width: 483px;
+}
+
+.pyi {
+	top: 192px;
+    left: 97px;
+    width: 87px;
+}
+
+.per {
+	width: 87px;
+    top: 278px;
+    left: 2px;
+}
+
+.psan {
+	width: 87px;
+    top: 351px;
+    left: -93px;
+}
+
+.psi {
+	width: 87px;
+    top: 361px;
+    left: 588px;
+}
+
+.pwu {
+	width: 87px;
+    top: 410px;
+    left: 493px;
+}
+
+.pliu {
+	width: 87px;
+    top: 459px;
+    left: 398px;
+}
+
+.pdb{
+	top: 508px;
+    left: -35px;
+    width: 265px;
+}
+
+.pzf {
+	top: 508px;
+    width: 87px;
+    left: 30px;
+}
+
+.ptxt {
+	outline: medium;
+    resize: none;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+    left: 120px;
+    top: 553px;
+    width: 471px;
+    height: 132px;
+    padding: 0px 42px;
+    max-width: 471px;
+    max-height: 132px;
+}
+
+.pzdjs {
+	width: 106px;
+    top: 592px;
+    left: -321px;
+}
+
+.pyear {
+	left: -219px;
+    top: 592px;
+    width: 50px;
+}
+
+.pmonth {
+	left: -197px;
+    top: 592px;
+    width: 26px;
+}
+
+.pday {
+	width: 26px;
+    top: 567px;
+    left: 586px;
+}

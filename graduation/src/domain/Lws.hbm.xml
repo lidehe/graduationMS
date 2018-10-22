@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Lws" table="tb_lws">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="lw" column="va_lw" type="integer" />
+		<property name="status" column="va_status" type="integer" />
+		<property name="fileName" column="va_filename" length="100" type="string" />
+		<property name="xuehao" column="va_xuehao" length="20" type="string" />
+		<property name="url" column="va_url" length="30" type="string" />
+		<property name="year" column="va_year" type="integer" />
+	</class>
+</hibernate-mapping>

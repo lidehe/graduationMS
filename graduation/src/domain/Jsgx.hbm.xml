@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Jsgx" table="tb_jsgx">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="gonghao" column="va_number" length="20" type="string" />
+		<property name="js" column="va_jsid" type="integer" />
+	</class>
+</hibernate-mapping>

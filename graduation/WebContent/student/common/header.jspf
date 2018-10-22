@@ -1,0 +1,30 @@
+<%@page import="factory.ServiceFactory"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="domain.Student"%>
+<%
+	Student studentH = (Student) session.getAttribute("student");
+	Boolean newMessage = ServiceFactory.getStudentServiceInstance().hasNewMessage(studentH);
+%>
+<div class="top_panel">
+	<div class="wrapper">
+		<div class="user">
+			<img src="student/Images/user_avatar.png" alt="user_avatar"
+				class="user_avatar" /> <span class="label" id="chPassword"
+				title="修改密码"><span style="color: #21c4e0;"><%=studentH.getName()%></span>，你好</span>
+		</div>
+		<div class="top_links">
+			<a class="i_22_pages"
+				style="display: inline-block; color: #9a9a9a; margin-top: 7px; padding-left: 24px; background-position-y: -2px;"
+				target="_blank" href="home.do">系统公告</a> <a class="logoutB i_22_inbox"
+				style="padding-left: 24px; background-position-y: -2px;"
+				target="_blank" href="ssjl.do?meth=stu" title="与指导老师交流">师生交流<%
+ 	if (newMessage) {
+ %> <span title="有新消息" style="color: #ff1313;">*new</span> <%
+ 	}
+ %>
+			</a> <a class="logoutB" href="login.do?method=logout" title="退出"><span
+				class="logoutI">&nbsp;</span>退出</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+.saveChange{
+	text-align:center;
+}
+input{
+	text-align:center;
+}
+
+#tb_SPaper td{
+	font-size:13px;
+}
+
+#tb_XPersonalPaper td{
+	font-size:13px;
+}
+#tb_XGroupPaper td{
+	font-size:13px;
+}

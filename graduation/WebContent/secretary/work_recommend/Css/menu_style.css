@@ -1,0 +1,16 @@
+.menu_bar{
+	background-color:#8B8B83;
+}
+
+.initialHeadTabs{
+	margin-left:50px;
+	font-color:black;
+}
+
+.active_initialHeadTabs{
+	margin-left:50px;
+	color:#F4F4F4;
+}
+.pageBTNS{
+	text-align:center;
+}

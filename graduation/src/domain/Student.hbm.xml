@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Student" table="tb_student">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="number" column="va_number" length="20" type="string" />
+		<property name="name" column="va_name" length="30" type="string" />
+		<property name="sex" column="va_sex" type="integer" />
+		<property name="identityN" column="va_id" length="20" type="string" />
+		<property name="yx" column="va_yxid" type="integer" />
+		<property name="zy" column="va_zyid" type="integer" />
+		<property name="bj" column="va_class" length="50" type="string" />
+		<property name="tel" column="va_telephone" length="20" type="string" />
+		<property name="teacher" column="va_teacher" length="20" type="string" />
+		<property name="dbz" column="va_dbid" type="integer" />
+		<property name="isgroup" column="va_group" type="integer" />
+		<property name="stage" column="va_stage" type="integer" />
+		<property name="type" column="va_type" type="integer" />
+		<property name="kt" column="va_ktid" type="integer" />
+		<property name="ktbg" column="va_ktbgid" type="integer" />
+		<property name="jdxcg" column="va_jdxid" type="integer" />
+		<property name="bs" column="va_bsid" type="integer" />
+		<property name="answer" column="va_answer" type="integer" />
+		<property name="year" column="va_year" type="integer" />
+	</class>
+</hibernate-mapping>

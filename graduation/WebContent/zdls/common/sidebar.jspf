@@ -1,0 +1,85 @@
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Teacher"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	Teacher teacherS = (Teacher) session.getAttribute("teacher");
+	boolean nMes = ServiceFactory.getTeacherServiceInstance().newMessage(teacherS);
+%>
+<aside class="sidebar">
+	<!-- 		左侧菜单，当前项带有active_tab -->
+	<ul class="tab_nav">
+		<li
+			class="
+		<%if (sideInd == 0) {
+				out.print("active_tab");
+			}%>
+		 	i_32_ui"><a
+			href="tkt.do" title="课题操作"> <span class="tab_label">课题操作</span> <span
+				class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 1) {
+				out.print("active_tab");
+			}%>
+		 i_32_ui"><a
+			href="trws.do" title="任务书操作"> <span class="tab_label">任务书操作</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 2) {
+				out.print("active_tab");
+			}%>
+		i_32_dashboard"><a
+			href="tktbg.do" title="开题报告阅览"> <span class="tab_label">开题报告阅览</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 3) {
+				out.print("active_tab");
+			}%>
+			i_32_forms"><a
+			href="tjdxcg.do" title="阶段交流"> <span class="tab_label">阶段性成果</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 4) {
+				out.print("active_tab");
+			}%>
+		i_32_tables"><a
+			href="tlwcg.do" title="成果交流"> <span class="tab_label">最终成果</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 5) {
+				out.print("active_tab");
+			}%>
+		i_32_tables"><a
+			target="_blank" href="zdlspsb.do" title="指导老师评审表"> <span
+				class="tab_label">指导老师评审表</span> <span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 6) {
+				out.print("active_tab");
+			}%>
+		i_32_inbox"><a
+			href="tssjl.do" title="师生交流"> <span class="tab_label" <% if(nMes) out.print("style=\"color:#fd1d1d;\""); %>>师生交流</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+
+	</ul>
+</aside>

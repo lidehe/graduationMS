@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Yxlwz" table="tb_yxlwz">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="zuhao" column="va_zuhao" type="integer" />
+		<property name="yx" column="va_yx" type="integer" />
+		<property name="zy" column="va_zy" type="integer" />
+		<property name="status" column="va_status" type="integer" />
+		<property name="yfs" column="va_yfs" type="float" />
+		<property name="xfs" column="va_xfs" type="float" />
+		<property name="year" column="va_year" type="integer" />
+		<property name="pm" column="va_pm" type="integer" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="domain.Teacher"%>
+<%
+	Teacher teacherH = (Teacher) session.getAttribute("teacher");
+%>
+<div class="top_panel">
+	<div class="wrapper">
+		<div class="user">
+			<img src="student/Images/user_avatar.png" alt="user_avatar"
+				class="user_avatar" /> <span class="label" id="chPassword"
+				title="修改密码"><span style="color: #21c4e0;"><%=teacherH.getName()%>老师</span>，您好</span>
+			<span style="color:#f4f4f4;" title="当前身份">&nbsp;&nbsp;[<%
+				if (request.getSession().getAttribute("js") == null)
+					out.print("其他身份");
+				else
+					out.print(request.getSession().getAttribute("js"));
+			%>]
+			</span>
+			<%@ include file="../../common/jsp/js.jspf"%>
+		</div>
+		<div class="top_links">
+			<a class="i_22_pages"
+				style="display: inline-block; color: #9a9a9a; margin-top: 7px; padding-left: 24px; background-position-y: -2px;"
+				target="_blank" href="home.do">系统公告</a> <a class="logoutB"
+				href="login.do?method=logout" title="退出"><span class="logoutI">&nbsp;</span>退出</a>
+		</div>
+	</div>
+</div>

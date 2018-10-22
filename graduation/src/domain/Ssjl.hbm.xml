@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Ssjl" table="tb_ssjl">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="writer" column="va_writer" length="20" type="string" />
+		<property name="reader" column="va_reader" length="20" type="string" />
+		<property name="text" column="va_text" type="text" />
+		<property name="time" column="va_time" type="timestamp" />
+		<property name="status" column="va_status" type="integer" />
+	</class>
+</hibernate-mapping>

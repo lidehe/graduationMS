@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Dbzl" table="tb_dbzl">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="va_bz" length="40" type="string" />
+		<property name="yx" column="va_yx" type="integer" />
+		<property name="zy" column="va_zy" type="integer" />
+		<property name="type" column="va_type" type="integer" />
+		<property name="start" column="va_start" type="java.util.Date" />
+		<property name="end" column="va_end" type="java.util.Date" />
+		<property name="ms" column="va_ms" length="200" type="string" />
+		<property name="sj" column="va_sj" length="300" type="string" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,95 @@
+<%@page import="domain.Yxlwz"%>
+<%@page import="domain.Yxlw"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="utils.FloatUtil"%>
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Yuanxi"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	List<Yuanxi> yx = ServiceFactory.getTeacherServiceInstance().getAllYx();
+	HashMap<Integer, String> yxs = new HashMap<Integer, String>();
+	for (int i = 0, l = yx.size(); i < l; i++) {
+		yxs.put(yx.get(i).getId(), yx.get(i).getName());
+	}
+	List<Yxlw> lws = ServiceFactory.getTeacherServiceInstance().getAllYxlwOrderFs();
+	List<Yxlwz> zlws = ServiceFactory.getTeacherServiceInstance().getAllYxlwzOrderFs();
+%>
+<div class="g_12" id="table_wTabs">
+	<div class="widget_header wwOptions">
+		<h4 class="widget_header_title wwIcon i_16_data">学生数据</h4>
+		<ul class="w_Tabs">
+			<li><a href="#table_wTabs-1" title="Tab 1">个人优秀</a></li>
+			<li><a href="#table_wTabs-2" title="Tab 2">小组优秀</a></li>
+		</ul>
+	</div>
+	<div style="width:830px;" class="widget_contents noPadding" id="tableContent">
+		<div id="table_wTabs-1">
+			<table class="datatable tables">
+				<thead>
+					<tr>
+						<th>院系</th>
+						<th>学号</th>
+						<th>目前分数</th>
+						<th>详情</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+						for (int i = 0, l = lws.size(); i < l; i++) {
+					%>
+					<tr>
+						<td><%=yxs.get(lws.get(i).getYx())%></td>
+						<td><%=lws.get(i).getXuehao()%></td>
+						<td><%=FloatUtil.floatSaveTwoD(lws.get(i).getYfs())%></td>
+						<td style="text-align: center;"><div class="simple_buttons">
+								<input type="hidden" value="<%=lws.get(i).getXuehao()%>"
+									class="hiddenVal" />
+								<div onclick="pyDetail1(this)">详情</div>
+							</div></td>
+					</tr>
+					<%
+						}
+					%>
+				</tbody>
+			</table>
+		</div>
+
+
+		<div id="table_wTabs-2">
+			<table class="resizeable_tables tables">
+				<thead>
+					<tr>
+						<th>院系</th>
+						<th>组号</th>
+						<th>目前分数</th>
+						<th>详情</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+						for (int i = 0, l = zlws.size(); i < l; i++) {
+					%><tr>
+						<td><%=yxs.get(lws.get(i).getYx())%></td>
+						<td><%=zlws.get(i).getZuhao()%></td>
+						<td><%=zlws.get(i).getYfs()%></td>
+						<td style="text-align: center;"><div class="simple_buttons">
+								<input type="hidden" value="<%=zlws.get(i).getZuhao()%>"
+									class="hiddenVal" />
+								<div onclick="pyzDetail1(this)">详情</div>
+							</div></td>
+					</tr>
+					<%
+						}
+					%>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+	</div>
+</div>
+<script src="common/js/charts.js"></script>

@@ -1,0 +1,57 @@
+<%@page import="domain.Zqxj"%>
+<%@page import="utils.FloatUtil"%>
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Yuanxi"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	List<Yuanxi> yxs1 = ServiceFactory.getTeacherServiceInstance().getNowAllYuanxi();
+	List<Zqxj> zqxjs = ServiceFactory.getTeacherServiceInstance().getNowZqxj();
+%>
+<div class="g_12">
+	<div class="widget_header">
+		<h4 class="widget_header_title wwIcon i_16_resize">期中工作小结</h4>
+	</div>
+	<div class="widget_contents noPadding">
+		<table class="tables resizeable_tables">
+			<thead>
+				<tr>
+					<th>院系</th>
+					<th>工作小结</th>
+					<th>阅览</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+					for (int i = 0, l = yxs1.size(), m = 0, n = zqxjs.size(); i < l; i++) {
+				%>
+				<tr>
+					<td><%=yxs1.get(i).getName()%></td>
+					<%
+						if (m < n && zqxjs.get(m).getYx() == yxs1.get(i).getId()) {
+					%>
+					<td><%=zqxjs.get(m).getFileName()%></td>
+					<td style="text-align: center;"><a
+						href="preview.do?meth=zqxjP&yx=<%=yxs1.get(i).getId()%>"
+						target="_blank"><input type="button" value="阅  览"
+							class="submitIt simple_buttons" /></a><a
+						href="preview.do?meth=zqxjLoad&yx=<%=yxs1.get(i).getId()%>"
+						target="_blank"><input type="button" value="下  载"
+							class="submitIt simple_buttons" /></a></td>
+					<%
+						m++;
+							} else {
+					%><td>暂未上传</td>
+					<td></td>
+					<%
+						}
+					%>
+				</tr>
+				<%
+					}
+				%>
+			</tbody>
+		</table>
+	</div>
+</div>

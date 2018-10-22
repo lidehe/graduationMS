@@ -1,0 +1,49 @@
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Jsgx"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.HashMap"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="domain.Teacher"%>
+<%
+	Teacher teacherj = (Teacher) session.getAttribute("teacher");
+	List<Jsgx> gxs = ServiceFactory.getTeacherServiceInstance().getTeacherJses(teacherj);
+	HashMap<Integer,String> jsname = new HashMap<Integer,String>();
+	HashMap<Integer,String> jsurl = new HashMap<Integer,String>();
+	jsname.put(1, "指导老师");
+	jsurl.put(1, "zdls");
+	jsname.put(2, "专业负责人");
+	jsurl.put(2, "zyfzr");
+	jsname.put(3, "教学秘书");
+	jsurl.put(3, "jxms");
+	jsname.put(4, "院系负责人");
+	jsurl.put(4, "yxfzr");
+	jsname.put(5, "教务处管理员");
+	jsurl.put(5, "admin");
+	jsname.put(6, "校级评优老师");
+	jsurl.put(6, "pyry");
+	jsname.put(7, "抽检老师");
+	jsurl.put(7, "cjry");
+	jsname.put(8, "答辩组老师");
+	jsurl.put(8, "dbzcy");
+	jsname.put(9, "校领导、督导");
+	jsurl.put(9, "dcld");
+	jsname.put(10, "院系评优老师");
+	jsurl.put(10, "ypyry");
+%>
+<select id="jsSelect" class="simple_form" >
+	<option value="0" selected="selected">切换身份</option>
+	<%for(int i = 0,l = gxs.size();i < l; i++){ %>
+	<option value="<%=jsurl.get(gxs.get(i).getJs()) %>"><%=jsname.get(gxs.get(i).getJs()) %></option>
+	<%} %>
+</select>
+<script>
+$(function(){
+	$("#jsSelect").change(function(){
+		var val = $(this).val();
+		if(val != 0){
+			window.location.href = "/graduation/teacherDirect.do?pt="+val;
+		}
+	});
+});
+</script>

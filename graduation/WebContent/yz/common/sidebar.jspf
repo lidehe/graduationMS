@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<aside class="sidebar">
+	<!-- 		左侧菜单，当前项带有active_tab -->
+	<ul class="tab_nav">
+		<li
+			class="
+		<%if (sideInd == 0) {
+				out.print("active_tab");
+			}%>
+		 	i_32_ui"><a
+			href="yz.do?meth=charts" title="院系信息统计"> <span class="tab_label">院系信息统计</span>
+				<span class="tab_info"></span>
+		</a></li>
+
+		<li
+			class="
+		<%if (sideInd == 1) {
+				out.print("active_tab");
+			}%>
+		 i_32_ui"><a
+			href="yz.do" title="学生详情与总结"> <span class="tab_label">
+					学生详情与总结 </span> <span class="tab_info"></span>
+		</a></li>
+	</ul>
+</aside>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Kt" table="tb_kt">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="fzrgonghao" column="va_zyfzr" length="20" type="string" />
+		<property name="gonghao" column="va_zdls" length="20" type="string" />
+		<property name="fzrsh" column="va_fzrs" type="integer" />
+		<property name="sh" column="va_zdlss" type="integer" />
+		<property name="name" column="va_name" length="80" type="string" />
+		<property name="text" column="va_ms" length="200" type="string" />
+		<property name="shuxing" column="va_sx" type="integer" />
+		<property name="yx" column="va_yx" type="integer" />
+		<property name="zy" column="va_zy" type="integer" />
+		<property name="xzrs" column="va_xzrs" type="integer" />
+		<property name="year" column="va_year" type="integer" />
+		<property name="bylx" column="va_bylx" type="integer" />
+	</class>
+</hibernate-mapping>

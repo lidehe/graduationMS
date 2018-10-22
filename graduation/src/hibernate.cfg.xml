@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration
+ PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/graduation_db?useUnicode=true&amp;characterEncoding=utf-8
+		</property>
+		<property name="connection.username">
+			root
+		</property>
+		<property name="connection.password">
+			root
+		</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- 扩展配置 -->
+	    <property name="hibernate.show_sql">false</property> 
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.jdbc.fetch_size">100</property>
+		<property name="hibernate.jdbc.batch_size">30</property>
+		<!-- 配置二级缓存 -->
+		<!-- <property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+ -->
+		<!-- 资源配置 -->
+		<mapping resource="domain/Account.hbm.xml" />
+		<mapping resource="domain/Byfs.hbm.xml" />
+		<mapping resource="domain/Cjbd.hbm.xml" />
+		<mapping resource="domain/Cjk.hbm.xml" />
+		<mapping resource="domain/Cjrz.hbm.xml" />
+		<mapping resource="domain/Dbjsz.hbm.xml" />
+		<mapping resource="domain/Dbpsb.hbm.xml" />
+		<mapping resource="domain/Dbpsbx.hbm.xml" />
+		<mapping resource="domain/Dbzl.hbm.xml" />
+		<mapping resource="domain/Gzzj.hbm.xml" />
+		<mapping resource="domain/Jdxcg.hbm.xml" />
+		<mapping resource="domain/Jdxcgs.hbm.xml" />
+		<mapping resource="domain/Js.hbm.xml" />
+		<mapping resource="domain/Jsgx.hbm.xml" />
+		<mapping resource="domain/Kt.hbm.xml" />
+		<mapping resource="domain/Ktbg.hbm.xml" />
+		<mapping resource="domain/Lw.hbm.xml" />
+		<mapping resource="domain/Lwcg.hbm.xml" />
+		<mapping resource="domain/Lws.hbm.xml" />
+		<mapping resource="domain/Notice.hbm.xml" />
+		<mapping resource="domain/Notices.hbm.xml" />
+		<mapping resource="domain/Pybd.hbm.xml" />
+		<mapping resource="domain/Pypsb.hbm.xml" />
+		<mapping resource="domain/Pypsbx.hbm.xml" />
+		<mapping resource="domain/Pyrz.hbm.xml" />
+		<mapping resource="domain/Rws.hbm.xml" />
+		<mapping resource="domain/Ssjl.hbm.xml" />
+		<mapping resource="domain/Student.hbm.xml" />
+		<mapping resource="domain/Sxcj.hbm.xml" />
+		<mapping resource="domain/Sxcjx.hbm.xml" />
+		<mapping resource="domain/Teacher.hbm.xml" />
+		<mapping resource="domain/Xsz.hbm.xml" />
+		<mapping resource="domain/Xszl.hbm.xml" />
+		<mapping resource="domain/Year.hbm.xml" />
+		<mapping resource="domain/Yuanxi.hbm.xml" />
+		<mapping resource="domain/Yxlw.hbm.xml" />
+		<mapping resource="domain/Yxlwx.hbm.xml" />
+		<mapping resource="domain/Yxlwz.hbm.xml" />
+		<mapping resource="domain/Zdlspsb.hbm.xml" />
+		<mapping resource="domain/Zdlspsbx.hbm.xml" />
+		<mapping resource="domain/Zf.hbm.xml" />
+		<mapping resource="domain/Zhuanye.hbm.xml" />
+		<mapping resource="domain/Zpjl.hbm.xml" />
+		<mapping resource="domain/Zqxj.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

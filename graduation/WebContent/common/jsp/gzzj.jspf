@@ -1,0 +1,57 @@
+<%@page import="domain.Gzzj"%>
+<%@page import="utils.FloatUtil"%>
+<%@page import="factory.ServiceFactory"%>
+<%@page import="domain.Yuanxi"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	List<Yuanxi> yxs = ServiceFactory.getTeacherServiceInstance().getNowAllYuanxi();
+	List<Gzzj> gzzjs = ServiceFactory.getTeacherServiceInstance().getNowGzzj();
+%>
+<div class="g_12">
+	<div class="widget_header">
+		<h4 class="widget_header_title wwIcon i_16_resize">期末工作总结</h4>
+	</div>
+	<div class="widget_contents noPadding">
+		<table class="tables resizeable_tables">
+			<thead>
+				<tr>
+					<th>院系</th>
+					<th>工作总结</th>
+					<th>阅览</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+					for (int i = 0, l = yxs.size(), m = 0, n = gzzjs.size(); i < l; i++) {
+				%>
+				<tr>
+					<td><%=yxs.get(i).getName()%></td>
+					<%
+						if (m < n && gzzjs.get(m).getYx() == yxs.get(i).getId()) {
+					%>
+					<td><%=gzzjs.get(m).getFileName()%></td>
+					<td style="text-align: center;"><a
+						href="preview.do?meth=gzzjP&yx=<%=yxs.get(i).getId()%>"
+						target="_blank"><input type="button" value="阅  览"
+							class="submitIt simple_buttons" /></a><a
+						href="preview.do?meth=gzzjLoad&yx=<%=yxs.get(i).getId()%>"
+						target="_blank"><input type="button" value="下  载"
+							class="submitIt simple_buttons" /></a></td>
+					<%
+						m++;
+							} else {
+					%><td>暂未上传</td>
+					<td></td>
+					<%
+						}
+					%>
+				</tr>
+				<%
+					}
+				%>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Xszl" table="tb_xszl">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="va_bz" length="40" type="string" />
+	</class>
+</hibernate-mapping>

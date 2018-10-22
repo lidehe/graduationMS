@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Zhuanye" table="tb_zhuanye">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="va_name" length="60" type="string" />
+		<property name="yx" column="va_yx" type="integer" />
+		<property name="dm" column="va_dm" length="30" type="string" />
+		<property name="year" column="va_year" type="integer" />
+	</class>
+</hibernate-mapping>

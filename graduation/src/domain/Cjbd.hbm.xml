@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Cjbd" table="tb_cjbd">
+		<id name="id" column="id" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="gonghao" column="va_gonghao" length="20" type="string" />
+		<property name="yx" column="va_yx" type="integer" />
+		<property name="year" column="va_year" type="integer" />
+	</class>
+</hibernate-mapping>
